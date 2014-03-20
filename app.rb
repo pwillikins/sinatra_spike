@@ -1,6 +1,6 @@
 require 'sinatra'
-require './item'
-require './items_repository'
+require './lib/item'
+require './lib/items_repository'
 
 get '/' do
   erb :index
