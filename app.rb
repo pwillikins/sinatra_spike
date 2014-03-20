@@ -1,5 +1,5 @@
 require 'sinatra'
 
-get '/app' do
-  "Hello World!"
+get '/' do
+  erb :index
 end
