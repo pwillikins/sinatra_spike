@@ -6,9 +6,10 @@
 <a href="/items/new">Create a new item</a>
 
 <ul>
-  <li>Item 1 -  <a href="/items/1">Show item</a></li>
-  <li>Item 2 -  <a href="/items/2">Show item</a></li>
-  <li>Item 3 -  <a href="/items/3">Show item</a></li>
+
+  <% ItemsRepository.new.items.each do |item| %>
+    <li><%= item.name %> - <a href="/items/<%= item.id%>">Show item</a></li>
+  <% end %>
 </ul>
 
 </body>
