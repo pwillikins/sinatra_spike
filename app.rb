@@ -8,9 +8,10 @@ end
 
 get '/items' do
   filter = params[:filter]
+  @displayed_items = []
   if filter
     ItemsRepository.new.items.each do |item|
-      if item.name.downcase.include? filter.downcase
+      if item.name.downcase.include? filter.to_s.downcase
         @displayed_items << item
       end
     end
